@@ -137,5 +137,12 @@ public class GoFish {
             }
             writeCurrentData();
         }
+        if (this.playerTwo.getBook()>this.playerOne.getBook()){
+            System.out.println("\u001B[107m"+playerTwo.getName()+" is winner.\u001B[0m");
+        }else if(this.playerTwo.getBook()<this.playerOne.getBook()){
+            System.out.println("\u001B[107m"+this.playerOne.getName()+" is winner.\u001B[0m");
+        }else{
+            System.out.println("\u001B[107m"+"This game don't has a winner.\u001B[0m");
+        }
     }
 }

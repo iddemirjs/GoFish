@@ -50,24 +50,24 @@ public class Player {
                 this.cards.Push(tempStack.Pop());
             }
 
-            System.out.println("( Machine wanted ) "+choicedNumber);
+            System.out.println("\u001B[42m\u001B[90m( Machine wanted ) "+choicedNumber+"\u001B[0m");
             return choicedNumber;
         }else{
             Scanner scanner=new Scanner(System.in);
-            System.out.print(this.name+" asks ?: ");
+            System.out.print("\u001B[43m\u001B[90m"+this.name+" asks ?: "+"\u001B[0m");
             String request=scanner.nextLine();
             while (true){
                 try {
                     int number=Integer.parseInt(request);
                     if (number<1 || number>6){
                         System.out.println("Your input must be valid integer.");
-                        System.out.print("Again... "+this.name+" ask?: ");
+                        System.out.print("\u001B[43m\u001B[90m" + "Again... "+this.name+" ask?: "+"\u001B[0m");
                         request=scanner.nextLine();
                         continue;
                     }
                     if (detectCardSize(number)==0){
                         System.out.println("Your don't have this number. Because of that you can't ask it.");
-                        System.out.print("Again... "+this.name+" ask?: ");
+                        System.out.print("\u001B[43m\u001B[90m"+ "Again... "+this.name+" ask?: "+"\u001B[0m");
                         request=scanner.nextLine();
                         continue;
                     }
